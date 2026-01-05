@@ -2,245 +2,374 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Page title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edwin Chigozie - Front-End Developer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --text-color: #2c3e50;
+            --light-bg: #f8f9fa;
+        }
         
-     
- .pro, .tec, .proexp, .proj,
- .edu, .intrt, .langu {
- font-weight:bold;
- text-decoration:underline;
- }
- 
- .walloftext{border-bottom:1px black solid;
-      padding-bottom:3vh}
- 
- .walloftext2{border-bottom:1px green solid;
-           padding-bottom:1vh}
-      
-      
- .link, .hub{margin:2vh 1vw}
- 
-       
-.edd, .loc, .email, .phone, .dev, .web, .ctbt,
-.colla, .imp, .cre, .deve, .inter, .lang, .imp,
-.blt, .this, .higher, .cov,.eng, .igbo,
- .pid, .frame, .tools, .concpt, .dev, .webd, .ctbt
- {margin:1vh 1vw 0;
- line-height:1.8}
- 
-
- 
-
- 
-.git, .linkd, .snake, .cal, .port{
-           text-decoration:none;
-            color:white;
-            background-color:green;
-            border-radius:3px;
-            padding:0.5vh 1vw;
-            text-align:center;
-            line-height:auto;
-            }
-   .git{margin-left:2vw}
-            
- .front{border-bottom:1px black solid;
-       padding-bottom:3vh;
-       }
-    
-    .tec{margin-bottom:2vh;}
-    .red{border:2px red solid}
-    .frontend{font-weight:bold}
-    
-    .dar{font-weight:300;
-    color:blue}
-   
-  .cre{margin-bottom:2vh}
-  
-    
-  .lang, .frame, .tools, .concpt{margin:1vh 0}
- 
- .cover{background-color:yellow;
-       overflow:hidden;
-      }
-      
-  .walloftext3{padding-bottom:4vh}
-  
- .feel{color: blue;
-       overflow: hidden;}
-       
- .explore{
-     font-size:3.6vw;
-     margin-left:100vw;
-     white-space:nowrap;
-     transition:margin-left 10s linear;
- }
- 
- .dif{
-     margin-left:0;
- }
- 
-             
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .cv-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        
+        .header-section {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .name {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            letter-spacing: 2px;
+        }
+        
+        .contact-info {
+            font-size: 1.1rem;
+            opacity: 0.95;
+            margin-bottom: 1rem;
+        }
+        
+        .personal-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+            font-size: 0.95rem;
+        }
+        
+        .personal-item {
+            background: rgba(255,255,255,0.2);
+            padding: 0.75rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .section {
+            padding: 2.5rem;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .section:last-child {
+            border-bottom: none;
+        }
+        
+        .section-title {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid var(--secondary-color);
+            display: inline-block;
+        }
+        
+        .job-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--secondary-color);
+            margin-bottom: 0.25rem;
+        }
+        
+        .company-dates {
+            color: var(--accent-color);
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+        
+        .job-desc {
+            margin-bottom: 1.5rem;
+        }
+        
+        .achievement {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .achievement::before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: var(--secondary-color);
+            font-weight: bold;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .skill-item {
+            background: linear-gradient(45deg, var(--light-bg), white);
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 600;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+        
+        .skill-item:hover {
+            border-color: var(--secondary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+        }
+        
+        .project-card {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            border-left: 4px solid var(--secondary-color);
+            transition: transform 0.3s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .project-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .project-subtitle {
+            color: var(--accent-color);
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+        
+        .project-link {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .project-link:hover {
+            text-decoration: underline;
+        }
+        
+        .interests-list {
+            columns: 2;
+            column-gap: 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .name { font-size: 2.2rem; }
+            .section { padding: 1.5rem; }
+            .personal-details { grid-template-columns: 1fr; }
+            .interests-list { columns: 1; }
+        }
+        
+        .print-friendly {
+            print-color-adjust: exact;
+            -webkit-print-color-adjust: exact;
+        }
     </style>
 </head>
-<body>
-<div class="edd"> Edwin Chigozie</div>
-
-<div class="loc">- Location: Abuja, Nigeria</div>
-
-<div class="email">- Email: edwinchigozie2003@gmail.com </div> 
-
-<div class="phone">- Phone:📱 +234 (816) 338-7316  
-
-<div class="link">- [LinkedIn]: <a class="linkd" href="http://www.linkedin.com/in/edwin-chigozie-a78a14214">Click here</a> </div>
-<div class="hub">- [GitHub]: <a class="git" href="https://github.com/maxyl19">Click here</a></div>
- 
-
- 
- <p class=" pro">Professional Summary  </p>
-
-<div class="front">   Front-End Developer skilled in crafting interactive web applications with a focus on modern JavaScript and responsive design. Committed to writing clean code and delivering user-centric experiences that address real-world challenges.
-</div>
-         
-
- 
-
-<div class="tec">Technical Skills  </div>
-
-<div class="walloftext">
-<div class="lang "> - Languages: JavaScript (ES6+), HTML5, CSS3  </div>
-
-<div class="frame ">- Frameworks: React, Vue.js, Tailwind CSS  </div>
-
- <div class="tools">- Tools: Git, Visual Studio Code, Figma  </div>
-
-<div class="concpt">- Concepts: Responsive Design, Cross-Browser Compatibility  </div>
-
-</div>       
-
- 
-
-
-     
-
- 
-
-<div class="proexp">Job Experience  </div>
-
-       
-
- 
-
-<div class=" frontend">Front-End Developer  </div>
-
-<div class="walloftext">
-<div class="dar "> &nbsp Darlez Nigeria Ltd. | Abuja | Jan 2025 – Jun 2025  </div>
-
-<div class="dev">- Developed client websites using Vue.js and WordPress, enhancing user experience.  </div>
-
-<div class="imp">- Improved page speed by 30% through CSS animations and image lazy-loading.  </div>
-
-
-<div class=" colla">- Collaborated on responsive layouts for 5+ projects and reduced client-reported bugs by 40%.</div>
-
-</div>        
-
- 
-
-
- 
- 
-
-<div class="proj ">Projects  </div>
-
-<div class="walloftext2">         
-
-<div class="blt">-Built a browser-based snake game using HTML5 Canvas and Vanilla JavaScript. Achieved 100% code test coverage with Jest.
-<div class="this"><a href="https://maxyl19.github.io/Snake-game-/" class="snake"> [Classic Snake Game]</a></div>  </div>
-
-
-
-<div class="cre">-Created a mobile-responsive calculator with arithmetic capabilities and optimized UI, reducing render time by 20%.
-<div class="inter"><a  href="https://maxyl19.github.io/Calculator/" class="cal">[Interactive Calculator]</a></div></div>
-
- 
-
-<div class="deve">-Developed and designed various responsive websites.
-<div class="inter"><a class="port" href="https://maxyl19.github.io/Portfolio-/">[GitHub Portfolio]</a></div></div>
- 
-</div>
-</div>
-
-
-
-<div class="relin">
- 
-<div class="edu">Education  </div>
-<div class="walloftext">
-
-<div class="higher">-Higher National Diploma in Computer Engineering  </div>
-
-<div class="cov">-Covenant Polytechnic | Owerrinta, Abia | Graduated: September 2023  </div>
-
-</div>
- </div>
-
-
-
-
- 
-
-<div class="langu ">Languages  </div>
-
-<div class="walloftext">
-
-<div class="eng">-English (Native)  </div>
-
-<div class="igbo ">-Igbo  </div>
-
-<div class="pid">-Pidgin </div> 
-
-</div>
-
- 
-
-
-
-
- 
-
-<div class="intrt ">Interests</div>  
-
-<div class="walloftext3">
-
-<div class="webd ">-Web development, creating mini-games, designing interactive tools.  </div>
-
-
-<div class=" ctbt">-Contributing to open-source JavaScript projects and participating in coding challenges (LeetCode, Frontend Mentor).  </div>
-</div>
-       
-
- 
-
-<div class="cover"><div class="feel"><div class="explore"> Feel free to explore my projects and connect on LinkedIn!</div></div></div>
-
-<script>
-const linkd=document.querySelector(".linkd");
-const git=document.querySelector(".git");
-const feel=document.querySelector(".feel");
-const cover=document.querySelector(".cover");
-const explore=document.querySelector(".explore");
-const dif= document.querySelector(".dif");
-
-var testnum=500;
-
-explore.style.marginLeft="100vw";
-
-
-
-setTimeout(()=>{
-  explore.style.marginLeft="0";
-}, 100)
-</script>
+<body class="print-friendly">
+    <div class="cv-container">
+        <!-- Header -->
+        <div class="header-section">
+            <h1 class="name">Edwin Chigozie</h1>
+            <div class="contact-info">
+                <i class="fas fa-phone me-2"></i>+234 8163387316 | 
+                <i class="fas fa-envelope me-2 ms-2"></i>edwinchigozie2003@gmail.com
+            </div>
+            <div class="contact-info">
+                <i class="fas fa-map-marker-alt me-2"></i>Kuje, Abuja FCT | Front-End Developer Hub
+            </div>
+            <div class="personal-details">
+                <div class="personal-item">
+                    <i class="fas fa-flag me-2"></i>
+                    <strong>Nationality:</strong> Nigeria
+                </div>
+                <div class="personal-item">
+                    <i class="fas fa-birthday-cake me-2"></i>
+                    <strong>Birthday:</strong> 16 March 2001
+                </div>
+                <div class="personal-item">
+                    <i class="fab fa-github me-2"></i>
+                    <strong>Website:</strong> <a href="https://github.com/maxyl19/" class="text-white">github.com/maxyl19</a>
+                </div>
+                <div class="personal-item">
+                    <i class="fas fa-heart me-2"></i>
+                    <strong>Status:</strong> Single
+                </div>
+                <div class="personal-item">
+                    <i class="fas fa-info-circle me-2"></i>
+                    <strong>Religion:</strong> Atheist
+                </div>
+            </div>
+        </div>
+
+        <!-- Objective -->
+        <div class="section">
+            <h2 class="section-title">Objective</h2>
+            <p class="lead">
+                Dynamic Front-End Developer skilled in React, Vue.js, Tailwind CSS, and JavaScript (ES6+), with 30%+ performance optimizations at Darlez Nigeria Ltd. and Custom Maitama ICT.
+            </p>
+            <p>
+                Expert in responsive design, agile collaboration, and cross-browser solutions driving business growth. Seeking to build innovative web applications while contributing to open-source projects.
+            </p>
+        </div>
+
+        <!-- Work Experience -->
+        <div class="section">
+            <h2 class="section-title">Work Experience</h2>
+            
+            <div class="job-desc">
+                <div class="job-title">Web Developer</div>
+                <div class="company-dates">ICT Department, Custom Maitama | 07/2025 - 12/2025</div>
+                <div class="achievement">Maintained and updated internal websites and web-based tools using HTML5, CSS3, and JavaScript to improve department workflow efficiency.</div>
+                <div class="achievement">Collaborated with cross-functional teams to troubleshoot and resolve website bugs, enhancing site stability and user experience.</div>
+                <div class="achievement">Assisted in front-end development projects, implementing responsive design and cross-browser compatibility for ongoing initiatives.</div>
+            </div>
+
+            <div class="job-desc">
+                <div class="job-title">Front-End Developer</div>
+                <div class="company-dates">Darlez Nigeria Ltd. | 03/2025 - 06/2025</div>
+                <div class="achievement">Developed client websites using Vue.js, WordPress, and Tailwind CSS, enhancing user experience and responsive design.</div>
+                <div class="achievement">Optimized page speed by 30% through animations, image lazy-loading, and performance tuning.</div>
+                <div class="achievement">Collaborated on responsive layouts for 5+ projects, reducing client-reported bugs by 40% via rigorous testing and debugging.</div>
+            </div>
+        </div>
+
+        <!-- Projects -->
+        <div class="section">
+            <h2 class="section-title">Projects</h2>
+            
+            <div class="project-card">
+                <div class="project-title">Interactive Calculator</div>
+                <div class="project-subtitle">03/2025 - 05/2025 | Mobile-Responsive Calculator with 20% Render Time Optimization</div>
+                <p>Created mobile-responsive calculator with arithmetic operations and optimized UI, reducing render time by 20%.</p>
+                <a href="https://maxyl19.github.io/Calculator/" class="project-link" target="_blank">
+                    <i class="fab fa-github me-1"></i>maxyl19.github.io/Calculator/
+                </a>
+            </div>
+
+            <div class="project-card">
+                <div class="project-title">GitHub Portfolio</div>
+                <div class="project-subtitle">02/2025 - 04/2025 | Responsive Front-End Portfolio Showcase with Multiple Projects</div>
+                <p>Developed and designed various responsive websites showcasing front-end development skills.</p>
+                <a href="https://maxyl19.github.io/Portfolio/" class="project-link" target="_blank">
+                    <i class="fab fa-github me-1"></i>maxyl19.github.io/Portfolio/
+                </a>
+            </div>
+
+            <div class="project-card">
+                <div class="project-title">Classic Snake Game</div>
+                <div class="project-subtitle">01/2025 - 03/2025 | Browser-Based Snake Game with 100% Test Coverage</div>
+                <p>Built browser-based snake game using HTML5 Canvas and Vanilla JavaScript; achieved 100% code test coverage with Jest.</p>
+                <a href="https://maxyl19.github.io/Snake-game/" class="project-link" target="_blank">
+                    <i class="fab fa-github me-1"></i>maxyl19.github.io/Snake-game/
+                </a>
+            </div>
+        </div>
+
+        <!-- Education -->
+        <div class="section">
+            <h2 class="section-title">Education</h2>
+            <div class="project-card">
+                <div class="project-title">Higher National Diploma in Computer Engineering</div>
+                <div class="project-subtitle">Covenant Polytechnic, Aba, Abia State, Nigeria | 09/2018 - 09/2023</div>
+                <p><strong>GPA:</strong> 3.16/4.0 (79% equivalent)</p>
+            </div>
+        </div>
+
+        <!-- Skills -->
+        <div class="section">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-item"><i class="fab fa-html5 me-1"></i>HTML5</div>
+                <div class="skill-item"><i class="fab fa-css3-alt me-1"></i>CSS3</div>
+                <div class="skill-item"><i class="fab fa-js-square me-1"></i>JavaScript</div>
+                <div class="skill-item"><i class="fab fa-react me-1"></i>React</div>
+                <div class="skill-item"><i class="fab fa-wordpress me-1"></i>WordPress</div>
+                <div class="skill-item"><i class="fab fa-git-alt me-1"></i>Git</div>
+                <div class="skill-item"><i class="fas fa-magic me-1"></i>CSS Animations</div>
+                <div class="skill-item"><i class="fas fa-mobile-alt me-1"></i>Responsive Design</div>
+                <div class="skill-item"><i class="fab fa-microsoft me-1"></i>VS Code</div>
+                <div class="skill-item"><i class="fas fa-flask me-1"></i>Jest</div>
+                <div class="skill-item"><i class="fas fa-server me-1"></i>REST APIs</div>
+                <div class="skill-item"><i class="fas fa-wind me-1"></i>Tailwind/ES6+</div>
+                <div class="skill-item"><i class="fab fa-vuejs me-1"></i>Vue.js</div>
+            </div>
+        </div>
+
+        <!-- Interests & Activities -->
+        <div class="section">
+            <h2 class="section-title">Interests & Activities</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h5><i class="fas fa-heart me-2"></i>Interests</h5>
+                    <ul class="interests-list">
+                        <li>Web development, creating mini-games, designing interactive tools</li>
+                        <li>Contributing to open-source JavaScript projects</li>
+                        <li>Participating in coding challenges (LeetCode, Frontend Mentor)</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h5><i class="fas fa-running me-2"></i>Activities</h5>
+                    <ul class="interests-list">
+                        <li>Contributing to open-source JavaScript projects on GitHub</li>
+                        <li>Participating in coding challenges on LeetCode and Frontend Mentor</li>
+                        <li>Creating mini-games and interactive tools (Snake Game, Calculator)</li>
+                        <li>Designing responsive websites for personal portfolio showcase</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add print styles
+        window.addEventListener('beforeprint', () => {
+            document.body.classList.add('printing');
+        });
+
+        window.addEventListener('afterprint', () => {
+            document.body.classList.remove('printing');
+        });
+    </script>
 </body>
 </html>
