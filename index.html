@@ -1,148 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edwin Chigozie - Senior Frontend Developer</title>
+    <title>Edwin Chigozie CV - PDF Ready</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * { margin: 0; padding: 0; }
         body { 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-            line-height: 1.6; 
-            color: #2c3e50; 
-            max-width: 850px; 
-            margin: 0 auto; 
-            padding: 40px 20px; 
-            background: #fafbfc;
-            font-size: 11pt;
+            font-family: Arial, Helvetica, sans-serif; 
+            width: 210mm; 
+            min-height: 297mm; 
+            margin: 20mm auto; 
+            padding: 0 15mm;
+            font-size: 11pt; 
+            line-height: 1.3; 
+            color: #000;
+            background: white;
         }
-        .container { background: white; padding: 40px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
-        h1 { font-size: 32px; color: #1a1a1a; margin-bottom: 8px; font-weight: 700; }
-        .subtitle { color: #007BFF; font-size: 18px; font-weight: 600; margin-bottom: 20px; }
-        .contact { font-size: 11pt; margin-bottom: 30px; display: flex; flex-wrap: wrap; gap: 20px; font-weight: 500; }
-        .contact a { color: #007BFF; text-decoration: none; }
-        .contact a:hover { text-decoration: underline; }
-        h2 { font-size: 16pt; margin: 30px 0 15px 0; color: #1a1a1a; font-weight: 600; position: relative; }
-        h2::after { content: ''; position: absolute; bottom: -6px; left: 0; width: 50px; height: 3px; background: linear-gradient(90deg, #007BFF, #0056b3); }
-        .summary { font-size: 11pt; background: linear-gradient(135deg, #f8f9ff 0%, #e8f0ff 100%); padding: 20px; border-left: 4px solid #007BFF; margin-bottom: 20px; border-radius: 0 6px 6px 0; }
-        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px; margin: 15px 0; }
-        .skill-tag { background: #e3f2fd; padding: 8px 12px; border-radius: 20px; font-size: 10pt; font-weight: 500; border: 1px solid #bbdefb; }
-        .skill-tag strong { color: #1976d2; }
-        .job-entry { margin-bottom: 25px; }
-        .job-title { font-size: 14pt; font-weight: 700; color: #1a1a1a; margin-bottom: 4px; }
-        .company { font-size: 12pt; color: #666; font-weight: 500; margin-bottom: 8px; }
-        .dates { color: #888; font-size: 10pt; font-weight: 500; }
-        .achievement { position: relative; padding-left: 25px; margin-bottom: 8px; font-weight: 500; }
-        .achievement::before { content: '▸'; position: absolute; left: 0; color: #007BFF; font-weight: bold; font-size: 12pt; }
-        .project-card { background: #f8f9fa; padding: 20px; margin-bottom: 15px; border-radius: 8px; border-left: 4px solid #28a745; }
-        .project-title { font-weight: 700; font-size: 13pt; color: #1a1a1a; margin-bottom: 6px; }
-        .project-link { color: #28a745; font-weight: 600; text-decoration: none; }
-        .project-link:hover { text-decoration: underline; }
-        .metrics { background: linear-gradient(90deg, #d4edda, #c3e6cb); padding: 12px; border-radius: 6px; margin: 10px 0; font-weight: 600; font-size: 10.5pt; }
-        @media print { body { padding: 0; background: white; font-size: 10pt; } .container { box-shadow: none; padding: 20px; } }
-        @media (max-width: 768px) { body { padding: 20px 10px; } .container { padding: 25px; } h1 { font-size: 26px; } }
+        h1 { font-size: 28pt; font-weight: bold; text-align: center; margin: 0 0 8px 0; }
+        .contact { text-align: center; font-size: 10pt; margin-bottom: 25px; line-height: 1.4; }
+        .contact a { color: #000; text-decoration: underline; }
+        h2 { 
+            font-size: 12pt; 
+            font-weight: bold; 
+            border-bottom: 2px solid #333; 
+            padding-bottom: 4px; 
+            margin: 20px 0 12px 0; 
+            text-transform: uppercase; 
+            letter-spacing: 0.5px;
+        }
+        .job-title { font-weight: bold; font-size: 11pt; }
+        .company-dates { font-style: italic; float: right; margin-top: -8px; }
+        ul { margin: 8px 0 0 0; padding-left: 18px; }
+        li { margin-bottom: 5px; font-size: 10pt; }
+        .metric { font-weight: bold; color: #d32f2f; }
+        p { margin-bottom: 12px; font-size: 10pt; }
+        .clear { clear: both; }
+        .skills-grid div { margin-bottom: 6px; }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Edwin Chigozie</h1>
-            <div class="subtitle">Senior Frontend Developer | HackerOne-Validated Security Researcher</div>
-            <div class="contact">
-                <span>Kuje, Abuja FCT, Nigeria</span>
-                <span>+234 816 338 7316</span>
-                <span>edwinchigozie2003@gmail.com</span>
-                <a href="https://github.com/maxyl19" target="_blank">github.com/maxyl19</a>
-                <a href="https://maxyl19.github.io/Portfolio-/" target="_blank">Portfolio</a>
-            </div>
-        </header>
-
-        <section>
-            <h2>Professional Summary</h2>
-            <div class="summary">
-                <strong>Top 1% Frontend Developer</strong> with HackerOne validation, delivering 5+ production websites using 
-                <strong>React, Vue.js, Tailwind CSS, Bootstrap 5</strong>. Achieved <strong>30% performance gains</strong>, 
-                <strong>40% bug reduction</strong> via 500+ Jest tests (100% coverage), and <strong>100% cross-browser compatibility</strong> 
-                across Chrome/Firefox/Safari/Edge. Expert in responsive design, Lighthouse 95+ optimization, and production-grade UIs [file:1].
-            </div>
-        </section>
-
-        <section>
-            <h2>Core Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-tag"><strong>Frontend:</strong> HTML5, CSS3, JavaScript ES6+, React, Vue.js, Tailwind CSS, Bootstrap 5, WordPress</div>
-                <div class="skill-tag"><strong>Testing/Performance:</strong> Jest (100% coverage), Lighthouse 95+, Git, VS Code, Lazy Loading, Web Vitals</div>
-                <div class="skill-tag"><strong>Design:</strong> Responsive Design, Mobile-First, Cross-Browser, Accessibility (WCAG), Component Architecture</div>
-                <div class="skill-tag"><strong>Security/DevOps:</strong> APK Reverse Engineering, Termux, apktool, Smali Analysis (45K+ files), HackerOne Bug Bounty</div>
-            </div>
-        </section>
-
-        <section>
-            <h2>Professional Experience</h2>
-            <div class="job-entry">
-                <div class="job-title">Web Developer</div>
-                <div class="company">ICT Department, Nigeria Customs Service, Maitama</div>
-                <div class="dates">July 2025 – December 2025 (6 months)</div>
-                <div class="metrics">25% faster page loads • 85 bugs fixed • Zero downtime</div>
-                <div class="achievement">Engineered HTML5/CSS3/JavaScript solutions across 15 tools with 100% cross-browser compatibility</div>
-                <div class="achievement">Led 5-developer agile sprints delivering weekly production releases</div>
-                <div class="achievement">Eliminated 85 production bugs achieving zero-downtime deployment</div>
-            </div>
-
-            <div class="job-entry">
-                <div class="job-title">Frontend Developer</div>
-                <div class="company">Darlez Nigeria Ltd.</div>
-                <div class="dates">March 2025 – June 2025 (4 months)</div>
-                <div class="metrics">5 production websites • 98% client satisfaction • Lighthouse 95+</div>
-                <div class="achievement">Delivered 5 client websites using Vue.js + Tailwind CSS with 30% speed gains via lazy loading</div>
-                <div class="achievement">Implemented 500+ Jest test cases reducing bugs by 40% across production sites</div>
-                <div class="achievement">Designed 100% responsive mobile-first layouts passing all audit standards</div>
-            </div>
-        </section>
-
-        <section>
-            <h2>Featured Projects</h2>
-            
-            <div class="project-card">
-                <div class="project-title">ColorOS Security Research <span class="dates">(HackerOne Validated • Jan 2026)</span></div>
-                <div class="metrics">45K+ smali files analyzed • Perfect validation score</div>
-                <p>Discovered hardcoded API endpoints in ColorOS APK via Termux/apktool reverse engineering. <strong>GitHub source available</strong> [file:1].</p>
-            </div>
-
-            <div class="project-card">
-                <div class="project-title">Interactive Calculator</div>
-                <div class="metrics">20% render optimization • Mobile-responsive</div>
-                <p><a href="https://maxyl19.github.io/Calculator/" class="project-link" target="_blank">Live Demo ↗</a> | Arithmetic operations with optimized UI</p>
-            </div>
-
-            <div class="project-card">
-                <div class="project-title">NCS Customs Clearance Tracker</div>
-                <div class="metrics">Live PWA • 5 Nigerian ports • Bootstrap 5 responsive</div>
-                <p><a href="https://maxyl19.github.io/-NCS-Customs-clearance-Tracker-/" class="project-link" target="_blank">Live Demo ↗</a> | Real-time PAAR dashboard with duty calculator</p>
-            </div>
-
-            <div class="project-card">
-                <div class="project-title">Classic Snake Game</div>
-                <div class="metrics">100% Jest test coverage • HTML5 Canvas</div>
-                <p><a href="https://maxyl19.github.io/Snake-game-/" class="project-link" target="_blank">Live Demo ↗</a> | Browser-based game with full test suite</p>
-            </div>
-
-            <div class="project-card">
-                <div class="project-title">Responsive Portfolio Showcase</div>
-                <div class="metrics">Multiple projects • Fully responsive</div>
-                <p><a href="https://maxyl19.github.io/Portfolio-/" class="project-link" target="_blank">Live Demo ↗</a></p>
-            </div>
-        </section>
-
-        <section>
-            <h2>Education</h2>
-            <div class="job-entry">
-                <div class="job-title">Higher National Diploma, Computer Engineering</div>
-                <div class="company">Covenant Polytechnic, Aba, Nigeria</div>
-                <div class="dates">2018 – 2023 • GPA: 3.16/4.0 (79%)</div>
-                <div class="achievement">Open-source JavaScript contributor • LeetCode • Frontend Mentor challenges</div>
-            </div>
-        </section>
+    <h1>Edwin Chigozie</h1>
+    <div class="contact">
+        +234 816 338 7316 | edwinchigozie2003@gmail.com | Kuje, Abuja FCT, Nigeria<br>
+        github.com/maxyl19 | Front-End Developer
     </div>
+
+    <h2>Professional Summary</h2>
+    <p><strong>Intermediate Front-End Developer</strong> with 1.5 years experience delivering <span class="metric">5 production websites</span> using React, Vue.js, Tailwind CSS, Bootstrap 5.<br>
+    Achieved <span class="metric">30% page speed gains</span>, <span class="metric">Lighthouse 95 scores</span>, <span class="metric">40% bug reductions</span> via 500+ Jest tests.<br>
+    Built NCS Customs PWA, Snake Game (100% test coverage), mobile-first calculator. Expert in responsive design, Git, cross-browser compatibility.</p>
+
+    <h2>Work Experience</h2>
+    <p><span class="job-title">Front-End Developer</span> <span class="company-dates">Darlez Nigeria Ltd. | 03/2025 - 06/2025</span><div class="clear"></div>
+    <ul>
+        <li>Delivered 5 production websites (Vue.js, WordPress, Tailwind) - <span class="metric">98% client satisfaction</span></li>
+        <li>Achieved <span class="metric">30% page speed gains</span> via Lighthouse optimization, lazy loading</li>
+        <li>Reduced bugs <span class="metric">40%</span> through 500+ Jest test cases</li>
+        <li>Designed 100% mobile-first layouts passing responsive audits</li>
+    </ul>
+
+    <p><span class="job-title">Web Developer</span> <span class="company-dates">Customs ICT Dept, Maitama | 07/2025 - 12/2025</span><div class="clear"></div>
+    <ul>
+        <li>Engineered HTML5/CSS3/JS solutions reducing loads <span class="metric">25%</span> across 15 tools</li>
+        <li>Eliminated <span class="metric">85 production bugs</span>, zero downtime (Chrome/FF/Safari/Edge)</li>
+        <li>Led 5-person agile sprints with weekly releases</li>
+    </ul>
+
+    <h2>Key Projects</h2>
+    <ul>
+        <li><strong>NCS Customs Clearance Tracker</strong> - Bootstrap 5 PWA, real-time PAAR dashboard for 5 Nigerian ports, duty calculator</li>
+        <li><strong>Classic Snake Game</strong> - HTML5 Canvas + Vanilla JS, <span class="metric">100% Jest coverage</span></li>
+        <li><strong>Interactive Calculator</strong> - Mobile-responsive, <span class="metric">20% render optimization</span></li>
+        <li><strong>GitHub Portfolio</strong> - Responsive showcase of 5+ projects</li>
+    </ul>
+
+    <h2>Education</h2>
+    <p><strong>Higher National Diploma, Computer Engineering</strong><br>
+    Covenant Polytechnic, Aba, Abia State | 09/2018 - 09/2023<br>
+    <span class="metric">GPA: 3.16/4.0 (79% equivalent)</span></p>
+
+    <h2>Technical Skills</h2>
+    <div class="skills-grid">
+        <div><strong>Core:</strong> HTML5, CSS3, JavaScript ES6, Tailwind CSS, Bootstrap 5</div>
+        <div><strong>Frameworks:</strong> React, Vue.js, WordPress</div>
+        <div><strong>Tools:</strong> Git, VS Code, Jest (100% coverage), Lighthouse</div>
+        <div><strong>Specialized:</strong> Responsive Design, PWA, APK Reverse Engineering (Termux/Apktool)</div>
+    </div>
+
+    <h2>Achievements</h2>
+    <ul>
+        <li>HackerOne Bug Bounty: "PERFECT! Comprehensive evidence" - ColorOS APK analysis (45k smali files)</li>
+    </ul>
+
+    <h2>Interests</h2>
+    <ul>
+        <li>Open-source JS contributions (GitHub), LeetCode challenges, building mini-games</li>
+    </ul>
 </body>
 </html>
